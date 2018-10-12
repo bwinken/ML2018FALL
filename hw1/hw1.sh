@@ -1,0 +1,1 @@
+python3 inference_ans.py $1 $2
