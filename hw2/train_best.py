@@ -74,12 +74,12 @@ def parse_data(train_csv,test_csv,label_csv):
 	PAY5_OH_T	 	= one_hot(PAY_5_T-np.min(PAY_5),11)
 	PAY6_OH_T	 	= one_hot(PAY_6_T-np.min(PAY_6),11)
 
-	#train = np.hstack((PAY0_OH,PAY2_OH,PAY3_OH,PAY4_OH,PAY5_OH,PAY6_OH,SEX_OH,EDU_OH,MAR_OH,VALUE))
-	#test = np.hstack((PAY0_OH_T,PAY2_OH_T,PAY3_OH_T,PAY4_OH_T,PAY5_OH_T,PAY6_OH_T,SEX_OH_T,EDU_OH_T,MAR_OH_T,VALUE_T))
+	train = np.hstack((PAY0_OH,PAY2_OH,PAY3_OH,PAY5_OH,EDU_OH,MAR_OH))
+	test = np.hstack((PAY0_OH_T,PAY2_OH_T,PAY3_OH_T,PAY5_OH_T,EDU_OH_T,MAR_OH_T))
 
 
-	train = np.hstack((PAY0_OH,PAY2_OH,PAY3_OH,PAY4_OH,PAY5_OH,PAY6_OH))
-	test = np.hstack((PAY0_OH_T,PAY2_OH_T,PAY3_OH_T,PAY4_OH_T,PAY5_OH_T,PAY6_OH_T))
+	#train = np.hstack((PAY0_OH,PAY2_OH,PAY3_OH,PAY4_OH,PAY5_OH,PAY6_OH))
+	#test = np.hstack((PAY0_OH_T,PAY2_OH_T,PAY3_OH_T,PAY4_OH_T,PAY5_OH_T,PAY6_OH_T))
 	return train,test,label
 
 def sigmoid(x):
